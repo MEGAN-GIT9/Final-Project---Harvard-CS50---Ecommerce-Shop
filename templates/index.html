@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- HOME VIEW -->
+<div id="view-home" class="view active">
+    <!-- Hero Banner -->
+    <div class="hero-section mb-8">
+        <div class="relative z-10">
+            <div class="text-indigo-400 font-semibold text-sm tracking-wider uppercase mb-3">Summer 2026 Collection</div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">Discover the <br><span class="text-indigo-400">Future of Tech</span></h1>
+            <p class="text-gray-400 text-lg mb-8 max-w-xl">Premium smartphones, laptops, wearables, and audio gear — all at unbeatable prices.</p>
+            <div class="flex flex-wrap gap-4">
+                <button onclick="navigateTo('')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-xl font-bold transition-all hover:shadow-lg hover:shadow-indigo-500/25">Shop Now</button>
+                <button onclick="navigateTo('discounts')" class="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-xl font-bold transition-all backdrop-blur-sm border border-white/20">View Deals</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="mb-8">
+        <h2 class="section-title mb-4">Categories</h2>
+        <div id="categoryBar" class="categories-scroll"></div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="mb-4 flex items-center justify-between">
+        <h2 class="section-title">Products</h2>
+        <span class="text-sm text-gray-500" id="productCount"></span>
+    </div>
+    <div id="productGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"></div>
+</div>
+
+<!-- PRODUCT DETAIL VIEW -->
+<div id="view-product" class="view">
+    <div id="productDetail" class="py-4"></div>
+</div>
+
+<!-- CART VIEW -->
+<div id="view-cart" class="view">
+    <div class="mb-6">
+        <h2 class="section-title">Shopping Cart</h2>
+        <p class="text-gray-500 text-sm mt-1" id="cartItemCount"></p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 space-y-4" id="cartContent"></div>
+        <div id="cartSummary"></div>
+    </div>
+</div>
+
+<!-- CHECKOUT VIEW -->
+<div id="view-checkout" class="view">
+    <div class="mb-6">
+        <h2 class="section-title">Checkout</h2>
+        <p class="text-gray-500 text-sm mt-1">Complete your purchase</p>
+    </div>
+    <div id="checkoutContent"></div>
+</div>
+
+<!-- AUTH VIEW -->
+<div id="view-auth" class="view">
+    <div class="mb-8">
+        <h2 class="section-title">Account</h2>
+    </div>
+    <div id="authContent"></div>
+</div>
+
+<!-- ABOUT VIEW -->
+<div id="view-about" class="view">
+    <div id="aboutContent"></div>
+</div>
+
+<!-- DISCOUNTS VIEW -->
+<div id="view-discounts" class="view">
+    <div id="discountsContent"></div>
+</div>
+
+<!-- TERMS VIEW -->
+<div id="view-terms" class="view">
+    <div id="termsContent"></div>
+</div>
+{% endblock %}
